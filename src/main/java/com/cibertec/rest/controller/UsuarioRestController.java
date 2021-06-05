@@ -69,7 +69,7 @@ public class UsuarioRestController {
 		Optional<Usuario> obj = servicio.buscarUsuarioPorId(id);
 		if (obj.isPresent()) {
 			servicio.eliminaUsuario(id);
-			return ResponseEntity.ok().build();
+			return ResponseEntity.ok(obj.get());
 		} else {
 			log.error("Id " + id + " no existe");
 			return ResponseEntity.notFound().build();

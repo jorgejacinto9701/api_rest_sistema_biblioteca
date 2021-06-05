@@ -69,7 +69,7 @@ public class LibroRestController {
 		Optional<Libro> obj = servicio.buscarLibroPorId(id);
 		if (obj.isPresent()) {
 			servicio.eliminaLibro(id);
-			return ResponseEntity.ok().build();
+			return ResponseEntity.ok(obj.get());
 		} else {
 			log.error("Id " + id + " no existe");
 			return ResponseEntity.notFound().build();

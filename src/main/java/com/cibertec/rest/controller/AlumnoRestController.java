@@ -71,7 +71,7 @@ public class AlumnoRestController {
 		Optional<Alumno> obj = servicio.buscarAlumnoPorId(id);
 		if (obj.isPresent()) {
 			servicio.eliminaAlumno(id);
-			return ResponseEntity.ok().build();
+			return ResponseEntity.ok(obj.get());
 		} else {
 			log.error("Id " + id + " no existe");
 			return ResponseEntity.notFound().build();

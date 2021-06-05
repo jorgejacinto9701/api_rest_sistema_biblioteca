@@ -69,7 +69,7 @@ public class EditorialRestController {
 		Optional<Editorial> obj = servicio.buscarEditorialPorId(id);
 		if (obj.isPresent()) {
 			servicio.eliminaEditorial(id);
-			return ResponseEntity.ok().build();
+			return ResponseEntity.ok(obj.get());
 		} else {
 			log.error("Id " + id + " no existe");
 			return ResponseEntity.notFound().build();

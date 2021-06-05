@@ -69,7 +69,7 @@ public class RevistaRestController {
 		Optional<Revista> obj = servicio.buscarRevistaPorId(id);
 		if (obj.isPresent()) {
 			servicio.eliminaRevista(id);
-			return ResponseEntity.ok().build();
+			return ResponseEntity.ok(obj.get());
 		} else {
 			log.error("Id " + id + " no existe");
 			return ResponseEntity.notFound().build();

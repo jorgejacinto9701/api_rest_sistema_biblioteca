@@ -69,7 +69,7 @@ public class ProveedorRestController {
 		Optional<Proveedor> obj = servicio.buscarProveedorPorId(id);
 		if (obj.isPresent()) {
 			servicio.eliminaProveedor(id);
-			return ResponseEntity.ok().build();
+			return ResponseEntity.ok(obj.get());
 		} else {
 			log.error("Id " + id + " no existe");
 			return ResponseEntity.notFound().build();

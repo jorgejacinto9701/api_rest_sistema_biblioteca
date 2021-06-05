@@ -71,7 +71,7 @@ public class AutorRestController {
 		Optional<Autor> obj = servicio.buscarAutorPorId(id);
 		if (obj.isPresent()) {
 			servicio.eliminaAutor(id);
-			return ResponseEntity.ok().build();
+			return ResponseEntity.ok(obj.get());
 		} else {
 			log.error("Id " + id + " no existe");
 			return ResponseEntity.notFound().build();

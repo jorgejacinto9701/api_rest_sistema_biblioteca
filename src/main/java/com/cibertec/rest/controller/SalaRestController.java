@@ -69,7 +69,7 @@ public class SalaRestController {
 		Optional<Sala> obj = servicio.buscarSalaPorId(id);
 		if (obj.isPresent()) {
 			servicio.eliminaSala(id);
-			return ResponseEntity.ok().build();
+			return ResponseEntity.ok(obj.get());
 		} else {
 			log.error("Id " + id + " no existe");
 			return ResponseEntity.notFound().build();
