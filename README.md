@@ -2,14 +2,14 @@
 ### En la API Rest está realizado en Spring
 ### Las clases expuestas son
 
-AlumnoRestController.java
-AutorRestController.java
-EditorialRestController.java
-LibroRestController.java
-ProveedorRestController.java
-RevistaRestController.java
-SalaRestController.java
-UsuarioRestController.java
+### AlumnoRestController.java
+### AutorRestController.java
+### EditorialRestController.java
+### LibroRestController.java
+### ProveedorRestController.java
+### RevistaRestController.java
+### SalaRestController.java
+### UsuarioRestController.java
 
 ## Autor ✒️
 
