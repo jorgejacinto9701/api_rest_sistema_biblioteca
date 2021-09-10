@@ -1,7 +1,15 @@
 # api_rest_sistema_biblioteca
 ### En la API Rest está realizado en Spring
-### Los métodos son:
+### Las clases expuestas son
 
+AlumnoRestController.java
+AutorRestController.java
+EditorialRestController.java
+LibroRestController.java
+ProveedorRestController.java
+RevistaRestController.java
+SalaRestController.java
+UsuarioRestController.java
 
 ## Autor ✒️
 
