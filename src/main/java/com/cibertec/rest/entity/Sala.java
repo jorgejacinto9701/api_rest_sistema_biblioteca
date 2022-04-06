@@ -26,7 +26,7 @@ public class Sala {
 	private int idSala;
 	private String numero;
 	private int piso;
-	private String capacidad;
+	private int capacidad;
 	private String recursos;
 	
 	@Temporal(TemporalType.DATE)

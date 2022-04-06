@@ -28,10 +28,15 @@ public class Libro {
 	private int anio;
 	private String categoria;
 	private String serie;
+	private String tipo;
 	
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "yyyy-MM-dd") 
 	private Date fechacreacion;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") 
+	private Date fechaRegistro;
 	
 	private int estado;
 }

@@ -29,9 +29,8 @@ public class Usuario {
 	private String dni;
 	private String login;
 	private String password;
-	private String correo;
 	private String direccion;
-	private String telefono;
+	private String correo;
 	
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "yyyy-MM-dd") 
