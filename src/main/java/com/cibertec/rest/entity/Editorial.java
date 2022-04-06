@@ -27,9 +27,15 @@ public class Editorial {
 	private String nombre;
 	private String direccion;
 	private String pais;
+	private String ruc;
 
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date fechaCreacion;
 
+	@Temporal(TemporalType.TIMESTAMP)
+	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") 
+	private Date fechaRegistro;
+	
+	private int estado;
 }

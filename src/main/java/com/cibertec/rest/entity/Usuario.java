@@ -30,13 +30,18 @@ public class Usuario {
 	private String login;
 	private String password;
 	private String correo;
+	private String direccion;
+	private String telefono;
 	
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "yyyy-MM-dd") 
 	private Date fechaNacimiento;
 
-	private String direccion;
+	@Temporal(TemporalType.TIMESTAMP)
+	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") 
+	private Date fechaRegistro;
 
+	private int estado;
 		
 	
 }

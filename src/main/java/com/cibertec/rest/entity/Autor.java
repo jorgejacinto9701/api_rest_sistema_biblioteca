@@ -26,6 +26,8 @@ public class Autor {
 	private int idAutor;
 	private String nombres;
 	private String apellidos;
+	private String dni;
+	private String direccion;
 	
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "yyyy-MM-dd") 
@@ -37,6 +39,8 @@ public class Autor {
 	
 	private String nacionalidad;
 	private String grado;
+	
+	private int estado;
 	
 		
 	

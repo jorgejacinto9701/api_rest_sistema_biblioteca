@@ -27,6 +27,7 @@ public class Alumno {
 	private String nombres;
 	private String apellidos;
 	private String dni;
+	private String direccion;
 	private String correo;
 	
 	@Temporal(TemporalType.DATE)
@@ -37,8 +38,5 @@ public class Alumno {
 	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") 
 	private Date fechaRegistro;
 
-	
-
-		
-	
+	private int estado;	
 }
