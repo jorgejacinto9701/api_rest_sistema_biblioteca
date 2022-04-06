@@ -27,7 +27,6 @@ public class Editorial {
 	private String nombre;
 	private String direccion;
 	private String pais;
-	private String ruc;
 
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
