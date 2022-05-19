@@ -11,5 +11,5 @@ public interface EditorialService {
 	public Optional<Editorial> buscarEditorialPorId(int id);
 	public void eliminaEditorial(int idEditorial);
 	public List<Editorial> listaEditorial();
-
+	public List<Editorial> listaEditorialNombre(String nombre);
 }

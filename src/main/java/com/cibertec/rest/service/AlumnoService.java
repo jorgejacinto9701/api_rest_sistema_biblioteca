@@ -11,5 +11,5 @@ public interface AlumnoService {
 	public Optional<Alumno> buscarAlumnoPorId(int id);
 	public void eliminaAlumno(int idAlumno);
 	public List<Alumno> listaAlumno();
-
+	
 }

@@ -33,6 +33,13 @@ public class EditorialRestController {
 		return ResponseEntity.ok(servicio.listaEditorial());
 	}
 
+	@GetMapping("/porNombre/{nombre}")
+	public ResponseEntity<List<Editorial>> listaEditorialPorNombre(@PathVariable("nombre")String nombre) {
+		log.info("METODO --> listaEditorialPorNombre");
+		return ResponseEntity.ok(servicio.listaEditorialNombre("%"+nombre+"%"));
+	}
+
+	
 	@PostMapping
 	public ResponseEntity<Editorial> registrar(@RequestBody Editorial obj) {
 		log.info("METODO --> registrar");

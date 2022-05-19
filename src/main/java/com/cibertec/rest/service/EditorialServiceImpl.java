@@ -35,4 +35,9 @@ public class EditorialServiceImpl implements EditorialService {
 		return repositorio.findAll();
 	}
 
+	@Override
+	public List<Editorial> listaEditorialNombre(String nombre) {
+		return repositorio.findByNombreLike(nombre);
+	}
+
 }
