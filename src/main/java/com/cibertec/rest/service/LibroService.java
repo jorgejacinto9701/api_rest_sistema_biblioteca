@@ -11,5 +11,5 @@ public interface LibroService {
 	public Optional<Libro> buscarLibroPorId(int id);
 	public void eliminaLibro(int idLibro);
 	public List<Libro> listaLibro();
-	public List<Libro> listaLibroPorNombre(String nombre);
+	public List<Libro> listaLibroPorTitulo(String nombre);
 }

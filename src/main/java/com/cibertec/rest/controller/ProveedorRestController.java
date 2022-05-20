@@ -33,13 +33,13 @@ public class ProveedorRestController {
 		return ResponseEntity.ok(servicio.listaProveedor());
 	}
 	
-	@GetMapping("/porNombre")
+	@GetMapping("/porRazonSocial")
 	public ResponseEntity<List<Proveedor>> listaProveedorPorRazonSocial() {
 		log.info("METODO --> listaProveedor");
 		return ResponseEntity.ok(servicio.listaProveedor());
 	}
 	
-	@GetMapping("/porNombre/{razSoc}")
+	@GetMapping("/porRazonSocial/{razSoc}")
 	public ResponseEntity<List<Proveedor>> listaProveedorPorRazonSocial(@PathVariable("razSoc")String nombre) {
 		log.info("METODO --> listaProveedorPorRazonSocial");
 		return ResponseEntity.ok(servicio.listaProveedorPorRazonSocial("%"+nombre+"%"));

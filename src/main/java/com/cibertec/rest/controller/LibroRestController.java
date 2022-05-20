@@ -33,16 +33,16 @@ public class LibroRestController {
 		return ResponseEntity.ok(servicio.listaLibro());
 	}
 
-	@GetMapping("/porNombre")
-	public ResponseEntity<List<Libro>> listaLibroPorNombre() {
+	@GetMapping("/porTitulo")
+	public ResponseEntity<List<Libro>> listaLibroPorTitulo() {
 		log.info("METODO --> listaLibroPorNombre");
 		return ResponseEntity.ok(servicio.listaLibro());
 	}
 	
-	@GetMapping("/porNombre/{nombre}")
-	public ResponseEntity<List<Libro>> listaLibroPorNombre(@PathVariable("nombre")String nombre) {
+	@GetMapping("/porTitulo/{nombre}")
+	public ResponseEntity<List<Libro>> listaLibroPorTitulo(@PathVariable("nombre")String nombre) {
 		log.info("METODO --> listaLibroPorNombre");
-		return ResponseEntity.ok(servicio.listaLibroPorNombre("%"+nombre+"%"));
+		return ResponseEntity.ok(servicio.listaLibroPorTitulo("%"+nombre+"%"));
 	}
 	
 	@PostMapping
