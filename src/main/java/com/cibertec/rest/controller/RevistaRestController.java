@@ -32,6 +32,13 @@ public class RevistaRestController {
 		log.info("METODO --> listaRevista");
 		return ResponseEntity.ok(servicio.listaRevista());
 	}
+	
+	@GetMapping("/porNombre/{nombre}")
+	public ResponseEntity<List<Revista>> listaRevistaPorNombre(@PathVariable("nombre")String nombre) {
+		log.info("METODO --> listaRevistaPorNombre");
+		return ResponseEntity.ok(servicio.listaRevistaPorNombre("%"+nombre+"%"));
+	}
+	
 
 	@PostMapping
 	public ResponseEntity<Revista> registrar(@RequestBody Revista obj) {

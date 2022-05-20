@@ -11,5 +11,5 @@ public interface RevistaService {
 	public Optional<Revista> buscarRevistaPorId(int id);
 	public void eliminaRevista(int idRevista);
 	public List<Revista> listaRevista();
-
+	public List<Revista> listaRevistaPorNombre(String nombre);
 }

@@ -33,6 +33,12 @@ public class LibroRestController {
 		return ResponseEntity.ok(servicio.listaLibro());
 	}
 
+	@GetMapping("/porNombre/{nombre}")
+	public ResponseEntity<List<Libro>> listaLibroPorNombre(@PathVariable("nombre")String nombre) {
+		log.info("METODO --> listaLibroPorNombre");
+		return ResponseEntity.ok(servicio.listaLibroPorNombre("%"+nombre+"%"));
+	}
+	
 	@PostMapping
 	public ResponseEntity<Libro> registrar(@RequestBody Libro obj) {
 		log.info("METODO --> registrar");

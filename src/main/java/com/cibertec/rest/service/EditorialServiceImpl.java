@@ -13,31 +13,31 @@ import com.cibertec.rest.repository.EditorialRepository;
 public class EditorialServiceImpl implements EditorialService {
 
 	@Autowired
-	private EditorialRepository repositorio;
+	private EditorialRepository repository;
 
 	@Override
 	public Editorial insertaActualizaEditorial(Editorial obj) {
-		return repositorio.save(obj);
+		return repository.save(obj);
 	}
 
 	@Override
 	public Optional<Editorial> buscarEditorialPorId(int id) {
-		return repositorio.findById(id);
+		return repository.findById(id);
 	}
 
 	@Override
 	public void eliminaEditorial(int idEditorial) {
-		repositorio.deleteById(idEditorial);
+		repository.deleteById(idEditorial);
 	}
 
 	@Override
 	public List<Editorial> listaEditorial() {
-		return repositorio.findAll();
+		return repository.findAll();
 	}
 
 	@Override
-	public List<Editorial> listaEditorialNombre(String nombre) {
-		return repositorio.findByNombreLike(nombre);
+	public List<Editorial> listaEditorialPorNombre(String nombre) {
+		return repository.listaEditorialPorNombre(nombre);
 	}
 
 }

@@ -13,26 +13,31 @@ import com.cibertec.rest.repository.UsuarioRepository;
 public class UsuarioServiceImpl implements UsuarioService{
 
 	@Autowired
-	private UsuarioRepository repositorio; 
+	private UsuarioRepository repository; 
 	
 	@Override
 	public Usuario insertaActualizaUsuario(Usuario obj) {
-		return repositorio.save(obj);
+		return repository.save(obj);
 	}
 
 	@Override
 	public Optional<Usuario> buscarUsuarioPorId(int id) {
-		return repositorio.findById(id);
+		return repository.findById(id);
 	}
 
 	@Override
 	public void eliminaUsuario(int idUsuario) {
-		repositorio.deleteById(idUsuario);
+		repository.deleteById(idUsuario);
 	}
 
 	@Override
 	public List<Usuario> listaUsuario() {
-		return repositorio.findAll();
+		return repository.findAll();
+	}
+
+	@Override
+	public List<Usuario> listaUsuarioPorNombre(String numero) {
+		return repository.listaUsuarioPorNombre(numero);
 	}
 
 	

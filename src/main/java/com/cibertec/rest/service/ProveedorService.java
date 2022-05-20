@@ -11,5 +11,6 @@ public interface ProveedorService {
 	public Optional<Proveedor> buscarProveedorPorId(int id);
 	public void eliminaProveedor(int idProveedor);
 	public List<Proveedor> listaProveedor();
-
+	public List<Proveedor> listaProveedorPorRazonSocial(String razonSocial);
+	
 }

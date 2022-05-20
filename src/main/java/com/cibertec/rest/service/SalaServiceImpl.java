@@ -13,26 +13,31 @@ import com.cibertec.rest.repository.SalaRepository;
 public class SalaServiceImpl implements SalaService{
 
 	@Autowired
-	private SalaRepository repositorio; 
+	private SalaRepository repository; 
 	
 	@Override
 	public Sala insertaActualizaSala(Sala obj) {
-		return repositorio.save(obj);
+		return repository.save(obj);
 	}
 
 	@Override
 	public Optional<Sala> buscarSalaPorId(int id) {
-		return repositorio.findById(id);
+		return repository.findById(id);
 	}
 
 	@Override
 	public void eliminaSala(int idSala) {
-		repositorio.deleteById(idSala);
+		repository.deleteById(idSala);
 	}
 
 	@Override
 	public List<Sala> listaSala() {
-		return repositorio.findAll();
+		return repository.findAll();
+	}
+
+	@Override
+	public List<Sala> listaSalaPorNumero(String numero) {
+		return repository.listaSalaPorNumero(numero);
 	}
 
 	

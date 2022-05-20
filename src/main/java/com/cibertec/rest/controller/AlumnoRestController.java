@@ -34,6 +34,12 @@ public class AlumnoRestController {
 		return ResponseEntity.ok(servicio.listaAlumno());
 	}
 
+	@GetMapping("/porNombre/{nombre}")
+	public ResponseEntity<List<Alumno>> listaAlumnoPorNombre(@PathVariable("nombre")String nombre) {
+		log.info("METODO --> listaAlumnoPorNombre");
+		return ResponseEntity.ok(servicio.listaAlumnoPorNombre("%"+nombre+"%"));
+	}
+	
 	@PostMapping
 	public ResponseEntity<Alumno> registrar(@RequestBody Alumno obj) {
 		log.info("METODO --> registrar");

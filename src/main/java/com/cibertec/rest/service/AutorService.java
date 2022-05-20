@@ -11,5 +11,5 @@ public interface AutorService {
 	public Optional<Autor> buscarAutorPorId(int id);
 	public void eliminaAutor(int idAutor);
 	public List<Autor> listaAutor();
-
+	public List<Autor> listaAutorPorNombre(String nombre);
 }

@@ -32,6 +32,13 @@ public class ProveedorRestController {
 		log.info("METODO --> listaProveedor");
 		return ResponseEntity.ok(servicio.listaProveedor());
 	}
+	
+	@GetMapping("/porNombre/{razSoc}")
+	public ResponseEntity<List<Proveedor>> listaProveedorPorRazonSocial(@PathVariable("razSoc")String nombre) {
+		log.info("METODO --> listaProveedorPorRazonSocial");
+		return ResponseEntity.ok(servicio.listaProveedorPorRazonSocial("%"+nombre+"%"));
+	}
+	
 
 	@PostMapping
 	public ResponseEntity<Proveedor> registrar(@RequestBody Proveedor obj) {

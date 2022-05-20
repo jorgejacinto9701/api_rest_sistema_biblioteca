@@ -13,26 +13,31 @@ import com.cibertec.rest.repository.AlumnoRepository;
 public class AlumnoServiceImpl implements AlumnoService{
 
 	@Autowired
-	private AlumnoRepository repositorio; 
+	private AlumnoRepository repository; 
 	
 	@Override
 	public Alumno insertaActualizaAlumno(Alumno obj) {
-		return repositorio.save(obj);
+		return repository.save(obj);
 	}
 
 	@Override
 	public Optional<Alumno> buscarAlumnoPorId(int id) {
-		return repositorio.findById(id);
+		return repository.findById(id);
 	}
 
 	@Override
 	public void eliminaAlumno(int idAlumno) {
-		repositorio.deleteById(idAlumno);
+		repository.deleteById(idAlumno);
 	}
 
 	@Override
 	public List<Alumno> listaAlumno() {
-		return repositorio.findAll();
+		return repository.findAll();
+	}
+
+	@Override
+	public List<Alumno> listaAlumnoPorNombre(String nombre) {
+		return repository.listaPorNombre(nombre);
 	}
 
 	

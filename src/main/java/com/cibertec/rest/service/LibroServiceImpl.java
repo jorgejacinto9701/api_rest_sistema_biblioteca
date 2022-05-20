@@ -13,26 +13,31 @@ import com.cibertec.rest.repository.LibroRepository;
 public class LibroServiceImpl implements LibroService{
 
 	@Autowired
-	private LibroRepository repositorio; 
+	private LibroRepository repository; 
 	
 	@Override
 	public Libro insertaActualizaLibro(Libro obj) {
-		return repositorio.save(obj);
+		return repository.save(obj);
 	}
 
 	@Override
 	public Optional<Libro> buscarLibroPorId(int id) {
-		return repositorio.findById(id);
+		return repository.findById(id);
 	}
 
 	@Override
 	public void eliminaLibro(int idLibro) {
-		repositorio.deleteById(idLibro);
+		repository.deleteById(idLibro);
 	}
 
 	@Override
 	public List<Libro> listaLibro() {
-		return repositorio.findAll();
+		return repository.findAll();
+	}
+
+	@Override
+	public List<Libro> listaLibroPorNombre(String nombre) {
+		return repository.listaLibroPorNombre(nombre);
 	}
 
 	

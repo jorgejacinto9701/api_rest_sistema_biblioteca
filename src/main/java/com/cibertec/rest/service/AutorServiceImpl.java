@@ -13,26 +13,31 @@ import com.cibertec.rest.repository.AutorRepository;
 public class AutorServiceImpl implements AutorService{
 
 	@Autowired
-	private AutorRepository repositorio; 
+	private AutorRepository repository; 
 	
 	@Override
 	public Autor insertaActualizaAutor(Autor obj) {
-		return repositorio.save(obj);
+		return repository.save(obj);
 	}
 
 	@Override
 	public Optional<Autor> buscarAutorPorId(int id) {
-		return repositorio.findById(id);
+		return repository.findById(id);
 	}
 
 	@Override
 	public void eliminaAutor(int idAutor) {
-		repositorio.deleteById(idAutor);
+		repository.deleteById(idAutor);
 	}
 
 	@Override
 	public List<Autor> listaAutor() {
-		return repositorio.findAll();
+		return repository.findAll();
+	}
+
+	@Override
+	public List<Autor> listaAutorPorNombre(String nombre) {
+		return repository.listaPorNombre(nombre);
 	}
 
 	

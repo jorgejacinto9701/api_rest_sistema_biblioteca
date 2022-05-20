@@ -13,26 +13,31 @@ import com.cibertec.rest.repository.RevistaRepository;
 public class RevistaServiceImpl implements RevistaService{
 
 	@Autowired
-	private RevistaRepository repositorio; 
+	private RevistaRepository repository; 
 	
 	@Override
 	public Revista insertaActualizaRevista(Revista obj) {
-		return repositorio.save(obj);
+		return repository.save(obj);
 	}
 
 	@Override
 	public Optional<Revista> buscarRevistaPorId(int id) {
-		return repositorio.findById(id);
+		return repository.findById(id);
 	}
 
 	@Override
 	public void eliminaRevista(int idRevista) {
-		repositorio.deleteById(idRevista);
+		repository.deleteById(idRevista);
 	}
 
 	@Override
 	public List<Revista> listaRevista() {
-		return repositorio.findAll();
+		return repository.findAll();
+	}
+
+	@Override
+	public List<Revista> listaRevistaPorNombre(String nombre) {
+		return repository.listaRevistaPorNombre(nombre);
 	}
 
 	

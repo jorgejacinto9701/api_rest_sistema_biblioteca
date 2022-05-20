@@ -11,5 +11,5 @@ public interface UsuarioService {
 	public Optional<Usuario> buscarUsuarioPorId(int id);
 	public void eliminaUsuario(int idUsuario);
 	public List<Usuario> listaUsuario();
-
+	public List<Usuario> listaUsuarioPorNombre(String numero);
 }

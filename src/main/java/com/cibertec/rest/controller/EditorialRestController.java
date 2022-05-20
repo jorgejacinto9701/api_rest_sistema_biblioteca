@@ -36,7 +36,7 @@ public class EditorialRestController {
 	@GetMapping("/porNombre/{nombre}")
 	public ResponseEntity<List<Editorial>> listaEditorialPorNombre(@PathVariable("nombre")String nombre) {
 		log.info("METODO --> listaEditorialPorNombre");
-		return ResponseEntity.ok(servicio.listaEditorialNombre("%"+nombre+"%"));
+		return ResponseEntity.ok(servicio.listaEditorialPorNombre("%"+nombre+"%"));
 	}
 
 	

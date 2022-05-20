@@ -33,6 +33,12 @@ public class UsuarioRestController {
 		return ResponseEntity.ok(servicio.listaUsuario());
 	}
 
+	@GetMapping("/porNombre/{nombre}")
+	public ResponseEntity<List<Usuario>> listaUsuarioPorNombre(@PathVariable("nombre")String nombre) {
+		log.info("METODO --> listaUsuarioPorNombre");
+		return ResponseEntity.ok(servicio.listaUsuarioPorNombre("%"+nombre+"%"));
+	}
+	
 	@PostMapping
 	public ResponseEntity<Usuario> registrar(@RequestBody Usuario obj) {
 		log.info("METODO --> registrar");

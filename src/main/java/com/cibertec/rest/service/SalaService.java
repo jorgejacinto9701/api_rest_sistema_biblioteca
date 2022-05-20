@@ -11,5 +11,5 @@ public interface SalaService {
 	public Optional<Sala> buscarSalaPorId(int id);
 	public void eliminaSala(int idSala);
 	public List<Sala> listaSala();
-
+	public List<Sala> listaSalaPorNumero(String numero);
 }

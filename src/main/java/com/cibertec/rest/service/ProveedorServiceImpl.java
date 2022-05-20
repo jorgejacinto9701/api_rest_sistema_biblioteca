@@ -13,26 +13,31 @@ import com.cibertec.rest.repository.ProveedorRepository;
 public class ProveedorServiceImpl implements ProveedorService{
 
 	@Autowired
-	private ProveedorRepository repositorio; 
+	private ProveedorRepository repository; 
 	
 	@Override
 	public Proveedor insertaActualizaProveedor(Proveedor obj) {
-		return repositorio.save(obj);
+		return repository.save(obj);
 	}
 
 	@Override
 	public Optional<Proveedor> buscarProveedorPorId(int id) {
-		return repositorio.findById(id);
+		return repository.findById(id);
 	}
 
 	@Override
 	public void eliminaProveedor(int idProveedor) {
-		repositorio.deleteById(idProveedor);
+		repository.deleteById(idProveedor);
 	}
 
 	@Override
 	public List<Proveedor> listaProveedor() {
-		return repositorio.findAll();
+		return repository.findAll();
+	}
+
+	@Override
+	public List<Proveedor> listaProveedorPorRazonSocial(String razonSocial) {
+		return repository.listaProveedorPorRazonSocial(razonSocial);
 	}
 
 	
