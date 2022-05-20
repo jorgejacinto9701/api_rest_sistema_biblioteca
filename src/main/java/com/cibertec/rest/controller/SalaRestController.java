@@ -33,6 +33,12 @@ public class SalaRestController {
 		return ResponseEntity.ok(servicio.listaSala());
 	}
 	
+	@GetMapping("/porNumero")
+	public ResponseEntity<List<Sala>> listaSalaPorNumero() {
+		log.info("METODO --> listaSalaPorNumero");
+		return ResponseEntity.ok(servicio.listaSala());
+	}
+	
 	@GetMapping("/porNumero/{numero}")
 	public ResponseEntity<List<Sala>> listaSalaPorNumero(@PathVariable("numero")String numero) {
 		log.info("METODO --> listaSalaPorNumero");

@@ -33,6 +33,12 @@ public class UsuarioRestController {
 		return ResponseEntity.ok(servicio.listaUsuario());
 	}
 
+	@GetMapping("/porNombre")
+	public ResponseEntity<List<Usuario>> listaUsuarioPorNombre() {
+		log.info("METODO --> listaUsuarioPorNombre");
+		return ResponseEntity.ok(servicio.listaUsuario());
+	}
+	
 	@GetMapping("/porNombre/{nombre}")
 	public ResponseEntity<List<Usuario>> listaUsuarioPorNombre(@PathVariable("nombre")String nombre) {
 		log.info("METODO --> listaUsuarioPorNombre");

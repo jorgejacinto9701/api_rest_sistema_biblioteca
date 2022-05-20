@@ -34,6 +34,12 @@ public class AutorRestController {
 		return ResponseEntity.ok(servicio.listaAutor());
 	}
 
+	@GetMapping("/porNombre")
+	public ResponseEntity<List<Autor>> listaAutorPorNombre() {
+		log.info("METODO --> listaAutorPorNombre");
+		return ResponseEntity.ok(servicio.listaAutor());
+	}
+	
 	@GetMapping("/porNombre/{nombre}")
 	public ResponseEntity<List<Autor>> listaAutorPorNombre(@PathVariable("nombre")String nombre) {
 		log.info("METODO --> listaAutorPorNombre");
