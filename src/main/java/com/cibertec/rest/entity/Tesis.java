@@ -48,8 +48,8 @@ public class Tesis {
 
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "idAlumno")
-	private Alumno alumno;
+	@JoinColumn(name = "idPais")
+	private Pais pais;
 	
 
    
