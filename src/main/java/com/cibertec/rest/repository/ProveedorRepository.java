@@ -10,6 +10,6 @@ import com.cibertec.rest.entity.Proveedor;
 public interface ProveedorRepository extends JpaRepository<Proveedor, Integer> {
 
 	
-	@Query("select e from Proveedor e where e.razonSocial like ?1")
+	@Query("select e from Proveedor e where e.razonsocial like ?1")
 	public List<Proveedor> listaProveedorPorRazonSocial(String nombre);
 }

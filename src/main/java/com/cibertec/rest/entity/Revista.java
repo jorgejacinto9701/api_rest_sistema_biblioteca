@@ -27,6 +27,8 @@ public class Revista {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idRevista;
+	
+	private String nombre;
 	private String frecuencia;
 	
 	@Temporal(TemporalType.DATE)
