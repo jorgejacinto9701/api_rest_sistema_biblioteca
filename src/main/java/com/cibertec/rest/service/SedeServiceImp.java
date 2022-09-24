@@ -6,17 +6,17 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cibertec.rest.entity.Pais;
-import com.cibertec.rest.repository.PaisRepository;
+import com.cibertec.rest.entity.Sede;
+import com.cibertec.rest.repository.SedeRepository;
 
 @Service
-public class SedeServiceImp implements PaisService {
+public class SedeServiceImp implements SedeService {
 
 	@Autowired
-	private PaisRepository Repository;
+	private SedeRepository Repository;
 
 	@Override
-	public List<Pais> listaTodos() {
+	public List<Sede> listaTodos() {
 		return Repository.findAll();
 
 	}
