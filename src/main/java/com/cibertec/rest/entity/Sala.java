@@ -42,5 +42,10 @@ public class Sala {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "idSede")
 	private Sede sede;
+	
+	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "idModalidad")
+	private Modalidad modalidad;
 
 }

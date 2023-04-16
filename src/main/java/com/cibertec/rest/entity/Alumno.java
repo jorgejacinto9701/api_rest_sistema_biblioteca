@@ -38,6 +38,7 @@ public class Alumno {
 	private String telefono;
 	private String dni;
 	private String correo;
+	private String direccion;
 	
 	@Temporal(TemporalType.DATE)
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd" , timezone = "America/Lima")
@@ -54,6 +55,9 @@ public class Alumno {
 	@JoinColumn(name = "idPais")
 	private Pais pais;
 	
-
+	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "idModalidad")
+	private Modalidad modalidad;
    
 }

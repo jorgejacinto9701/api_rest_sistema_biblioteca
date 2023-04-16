@@ -51,6 +51,8 @@ public class Tesis {
 	@JoinColumn(name = "idPais")
 	private Pais pais;
 	
-
-   
+	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "idModalidad")
+	private Modalidad modalidad;
 }

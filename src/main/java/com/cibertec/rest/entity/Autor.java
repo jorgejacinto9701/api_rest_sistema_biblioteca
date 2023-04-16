@@ -35,6 +35,7 @@ public class Autor {
 	private int idAutor;
 	private String nombres;
 	private String apellidos;
+	private String correo;
 	
 	@Temporal(TemporalType.DATE)
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd" , timezone = "America/Lima")
@@ -55,5 +56,8 @@ public class Autor {
 	private Grado grado;
 	
 
-   
+	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "idPais")
+	private Pais pais;
 }
