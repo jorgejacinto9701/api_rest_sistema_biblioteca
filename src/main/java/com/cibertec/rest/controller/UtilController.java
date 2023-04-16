@@ -13,11 +13,13 @@ import com.cibertec.rest.entity.Grado;
 import com.cibertec.rest.entity.Modalidad;
 import com.cibertec.rest.entity.Pais;
 import com.cibertec.rest.entity.Sede;
+import com.cibertec.rest.entity.TipoProveedor;
 import com.cibertec.rest.service.CategoriaService;
 import com.cibertec.rest.service.GradoService;
 import com.cibertec.rest.service.ModalidadService;
 import com.cibertec.rest.service.PaisService;
 import com.cibertec.rest.service.SedeService;
+import com.cibertec.rest.service.TipoProveedorService;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -40,6 +42,9 @@ public class UtilController {
 	
 	@Autowired
 	private SedeService sedeService;
+	
+	@Autowired
+	private TipoProveedorService tipoProveedorService;
 
 	@GetMapping("/listaPais")
 	@ResponseBody
@@ -76,6 +81,14 @@ public class UtilController {
 	public List<Sede> listaSede() {
 		log.info("METODO --> listaSede");
 		return sedeService.listaTodos();
+				
+	}
+	
+	@GetMapping("/listaTipoProveedor")
+	@ResponseBody
+	public List<TipoProveedor> listaTipoProveedor() {
+		log.info("METODO --> listaTipoProveedor");
+		return tipoProveedorService.listaTodos();
 				
 	}
 }
