@@ -19,5 +19,5 @@ public class Categoria {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idCategoria;
 	private String descripcion;
-
+	private int tipo;
 }

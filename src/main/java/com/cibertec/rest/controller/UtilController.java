@@ -53,11 +53,18 @@ public class UtilController {
 		return paisService.listaTodos();
 	}
 
-	@GetMapping("/listaCategoria")
+	@GetMapping("/listaCategoriaDeLibro")
 	@ResponseBody
-	public List<Categoria> listaCategoria() {
-		log.info("METODO --> listaCategoria");
-		return categoriaService.listaTodos();
+	public List<Categoria> listaCategoriaDeLibro() {
+		log.info("METODO --> listaCategoriaDeLibro");
+		return categoriaService.listaTodosPorTipo(1);
+	}
+	
+	@GetMapping("/listaCategoriaDeEditorial")
+	@ResponseBody
+	public List<Categoria> listaCategoriaDeEditorial() {
+		log.info("METODO --> listaCategoriaDeEditorial");
+		return categoriaService.listaTodosPorTipo(2);
 	}
 	
 	@GetMapping("/listaGrado")

@@ -53,4 +53,8 @@ public class Editorial {
 	private Pais pais;
 	
    
+	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "idCategoria")
+	private Categoria categoria;
 }

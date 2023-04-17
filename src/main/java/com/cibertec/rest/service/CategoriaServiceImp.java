@@ -13,12 +13,17 @@ import com.cibertec.rest.repository.CategoriaRepository;
 public class CategoriaServiceImp implements CategoriaService {
 
 	@Autowired
-	private CategoriaRepository Repository;
+	private CategoriaRepository repository;
 
 	@Override
 	public List<Categoria> listaTodos() {
-		return Repository.findAll();
+		return repository.findAll();
 
+	}
+
+	@Override
+	public List<Categoria> listaTodosPorTipo(int tipo) {
+		return repository.findByTipo(tipo);
 	}
 
 }
