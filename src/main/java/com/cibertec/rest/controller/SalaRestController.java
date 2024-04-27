@@ -1,5 +1,6 @@
 package com.cibertec.rest.controller;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -48,6 +49,7 @@ public class SalaRestController {
 	@PostMapping
 	public ResponseEntity<Sala> registrar(@RequestBody Sala obj) {
 		log.info("METODO --> registrar");
+		obj.setFechaRegistro(new Date());
 		return ResponseEntity.ok(servicio.insertaActualizaSala(obj));
 	}
 

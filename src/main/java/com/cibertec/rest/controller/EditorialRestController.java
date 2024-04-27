@@ -1,5 +1,6 @@
 package com.cibertec.rest.controller;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -49,6 +50,7 @@ public class EditorialRestController {
 	@PostMapping
 	public ResponseEntity<Editorial> registrar(@RequestBody Editorial obj) {
 		log.info("METODO --> registrar");
+		obj.setFechaRegistro(new Date());
 		return ResponseEntity.ok(servicio.insertaActualizaEditorial(obj));
 	}
 
