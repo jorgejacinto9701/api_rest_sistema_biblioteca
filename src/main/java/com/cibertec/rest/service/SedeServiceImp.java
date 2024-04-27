@@ -21,4 +21,9 @@ public class SedeServiceImp implements SedeService {
 
 	}
 
+	@Override
+	public Sede registra(Sede obj) {
+		return Repository.save(obj);
+	}
+
 }

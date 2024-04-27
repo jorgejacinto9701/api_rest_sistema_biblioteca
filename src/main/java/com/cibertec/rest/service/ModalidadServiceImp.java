@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cibertec.rest.entity.Modalidad;
+import com.cibertec.rest.entity.Pais;
 import com.cibertec.rest.repository.ModalidadRepository;
 
 @Service
@@ -21,4 +22,8 @@ public class ModalidadServiceImp implements ModalidadService {
 
 	}
 
+	@Override
+	public Modalidad registra(Modalidad obj) {
+		return Repository.save(obj);
+	}
 }

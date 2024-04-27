@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cibertec.rest.entity.Pais;
 import com.cibertec.rest.entity.TipoProveedor;
 import com.cibertec.rest.repository.TipoProveedorRepository;
 
@@ -20,5 +21,11 @@ public class TipoProveedorServiceImp implements TipoProveedorService {
 		return Repository.findAll();
 
 	}
+	
+	@Override
+	public TipoProveedor registra(TipoProveedor obj) {
+		return Repository.save(obj);
+	}
+
 
 }

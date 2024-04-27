@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cibertec.rest.entity.Categoria;
+import com.cibertec.rest.entity.TipoProveedor;
 import com.cibertec.rest.repository.CategoriaRepository;
 
 @Service
@@ -25,5 +26,8 @@ public class CategoriaServiceImp implements CategoriaService {
 	public List<Categoria> listaTodosPorTipo(int tipo) {
 		return repository.findByTipo(tipo);
 	}
-
+	@Override
+	public Categoria registra(Categoria obj) {
+		return repository.save(obj);
+	}
 }
