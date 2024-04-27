@@ -8,5 +8,7 @@ import com.cibertec.rest.entity.Pais;
 public interface PaisService {
 
 	public abstract List<Pais> listaTodos();
+	public abstract Pais registra(Pais obj);
+	
 
 }

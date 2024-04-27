@@ -13,12 +13,17 @@ import com.cibertec.rest.repository.PaisRepository;
 public class PaisServiceImp implements PaisService {
 
 	@Autowired
-	private PaisRepository Repository;
+	private PaisRepository repository;
 
 	@Override
 	public List<Pais> listaTodos() {
-		return Repository.findAll();
+		return repository.findAll();
 
+	}
+
+	@Override
+	public Pais registra(Pais obj) {
+		return repository.save(obj);
 	}
 
 }
