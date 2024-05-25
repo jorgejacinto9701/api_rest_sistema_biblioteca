@@ -91,4 +91,10 @@ public class ProveedorRestController {
 		}
 	}
 
+	@GetMapping("/porRazonSocial/(razSoc)")
+	public ResponseEntity<List<Proveedor>> listaProveedor() {
+		log.info("METODO --> listaProveedor");
+		return ResponseEntity.ok(servicio.listaProveedor());
+	}
+
 }

@@ -90,4 +90,10 @@ public class LibroRestController {
 		}
 	}
 
+	@GetMapping("porTituloIgual/(nombre)")
+	public ResponseEntity<List<Libro>> listaLibro() {
+		log.info("METODO --> listaLibro");
+		return ResponseEntity.ok(servicio.listaLibro());
+	}
+
 }
