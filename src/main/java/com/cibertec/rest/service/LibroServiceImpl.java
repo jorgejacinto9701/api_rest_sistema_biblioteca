@@ -40,6 +40,12 @@ public class LibroServiceImpl implements LibroService{
 		return repository.listaLibroPorTitulo(nombre);
 	}
 
+	//Sesión 8
+	@Override
+	public List<Libro> listaLibroPorTituloIgual(String nombre) {
+		return repository.listaLibroPorTituloIgual(nombre);
+	}
+
 	
 
 }
