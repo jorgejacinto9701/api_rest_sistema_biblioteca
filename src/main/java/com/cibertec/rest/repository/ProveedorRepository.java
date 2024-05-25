@@ -12,4 +12,10 @@ public interface ProveedorRepository extends JpaRepository<Proveedor, Integer> {
 	
 	@Query("select e from Proveedor e where e.razonsocial like ?1")
 	public List<Proveedor> listaProveedorPorRazonSocial(String nombre);
+
+	//SEM9
+//validacion de datos unicos
+@Query("select e from Proveedor e where e.razonsocial = ?1")
+	public List<Proveedor> listaProveedorPorRazonSocialIgual(String razonSocial);
+
 }

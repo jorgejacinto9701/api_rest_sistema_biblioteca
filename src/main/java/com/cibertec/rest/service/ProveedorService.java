@@ -12,5 +12,7 @@ public interface ProveedorService {
 	public void eliminaProveedor(int idProveedor);
 	public List<Proveedor> listaProveedor();
 	public List<Proveedor> listaProveedorPorRazonSocial(String razonSocial);
-	
+//sem9
+		public List<Proveedor> listaProveedorPorRazonSocialIgual(String razonSocial);
+
 }
