@@ -12,4 +12,8 @@ public interface AlumnoService {
 	public void eliminaAlumno(int idAlumno);
 	public List<Alumno> listaAlumno();
 	public List<Alumno> listaAlumnoPorNombre(String nombre);
+
+	public List<Alumno> listaPorNombreApellidoIgual(String nombre, String apellidos);
+
+
 }

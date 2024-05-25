@@ -40,6 +40,11 @@ public class AlumnoServiceImpl implements AlumnoService{
 		return repository.listaPorNombre(nombre);
 	}
 
+	@Override
+	public List<Alumno> listaPorNombreApellidoIgual(String nombre, String apellidos) {
+		return repository.listaPorNombreApellidoIgual(nombre, apellidos);
+	}
+
 	
 
 }
