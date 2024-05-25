@@ -100,7 +100,7 @@ public class EditorialRestController {
 
     @GetMapping("/porRuc/{ruc}")
     public ResponseEntity<List<Editorial>> listaEditorialPorRuc(@PathVariable("ruc") String ruc) {
-        log.info("METODO --> listaEditoriañPorRuc");
+        log.info("METODO --> listaEditorialPorRuc");
         return ResponseEntity.ok(servicio.listaEditorialPorRuc("%" + ruc + "%"));
 
 }
