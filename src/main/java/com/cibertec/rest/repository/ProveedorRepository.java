@@ -12,4 +12,6 @@ public interface ProveedorRepository extends JpaRepository<Proveedor, Integer> {
 	
 	@Query("select e from Proveedor e where e.razonsocial like ?1")
 	public List<Proveedor> listaProveedorPorRazonSocial(String nombre);
+
+	
 }
