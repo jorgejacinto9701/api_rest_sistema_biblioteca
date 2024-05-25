@@ -91,4 +91,11 @@ public class ProveedorRestController {
 		}
 	}
 
+	//sem9
+	@GetMapping("/porRazonSocial/{razSoc}")
+	public ResponseEntity<List<Proveedor>> listaProveedorPorRazonSocialIgual(@PathVariable("razSoc")String razonSocial) {
+		log.info("METODO --> listaProveedorPorRazonSocialIgual");
+		return ResponseEntity.ok(servicio.listaProveedorPorRazonSocialIgual("%"+razonSocial+"%"));
+	}
+
 }
