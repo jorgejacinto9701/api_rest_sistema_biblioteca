@@ -39,9 +39,13 @@ public class RevistaServiceImpl implements RevistaService{
 	public List<Revista> listaRevistaPorNombre(String nombre) {
 		return repository.listaRevistaPorNombre(nombre);
 	}
+	@Override
+	public List<Revista> listaRevistaPorNombreIgual(String nombre) {
+		return repository.listaRevistaPorNombreIgual(nombre);
+	}
 
 	
-
+	
 }
 
 
