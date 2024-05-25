@@ -40,6 +40,16 @@ public class ProveedorServiceImpl implements ProveedorService{
 		return repository.listaProveedorPorRazonSocial(razonSocial);
 	}
 
+	@Override
+	public List<Proveedor> listaProveedorPorRazonSocialIgual(String razonSocial) {
+		return repository.listaProveedorPorRazonSocialIgual(razonSocial);
+	}
+
+	@Override
+	public List<Proveedor> listaProveedorPorRuc(String ruc) {
+		return repository.listaProveedorPorRuc(ruc);
+	}
+
 	
 
 }

@@ -33,19 +33,18 @@ public class ProveedorRestController {
 		log.info("METODO --> listaProveedor");
 		return ResponseEntity.ok(servicio.listaProveedor());
 	}
-	
+
 	@GetMapping("/porRazonSocial")
 	public ResponseEntity<List<Proveedor>> listaProveedorPorRazonSocial() {
 		log.info("METODO --> listaProveedor");
 		return ResponseEntity.ok(servicio.listaProveedor());
 	}
-	
+
 	@GetMapping("/porRazonSocial/{razSoc}")
-	public ResponseEntity<List<Proveedor>> listaProveedorPorRazonSocial(@PathVariable("razSoc")String nombre) {
+	public ResponseEntity<List<Proveedor>> listaProveedorPorRazonSocial(@PathVariable("razSoc") String nombre) {
 		log.info("METODO --> listaProveedorPorRazonSocial");
-		return ResponseEntity.ok(servicio.listaProveedorPorRazonSocial("%"+nombre+"%"));
+		return ResponseEntity.ok(servicio.listaProveedorPorRazonSocial("%" + nombre + "%"));
 	}
-	
 
 	@PostMapping
 	public ResponseEntity<Proveedor> registrar(@RequestBody Proveedor obj) {
@@ -89,6 +88,18 @@ public class ProveedorRestController {
 			log.error("Id " + id + " no existe");
 			return ResponseEntity.notFound().build();
 		}
+	}
+
+	@GetMapping("/porRazonSocial/{razSoc}")
+	public ResponseEntity<List<Proveedor>> listaProveedorPorRazonSocialIgual(@PathVariable("razSoc") String nombre) {
+		log.info("METODO --> listaProveedorPorRazonSocial");
+		return ResponseEntity.ok(servicio.listaProveedorPorRazonSocialIgual("%" + nombre + "%"));
+	}
+
+	@GetMapping("/porRuc/{ruc}")
+	public ResponseEntity<List<Proveedor>> listaProveedorPorRuc(@PathVariable("ruc") String ruc) {
+		log.info("METODO --> listaProveedorPorRuc");
+		return ResponseEntity.ok(servicio.listaProveedorPorRuc("%" + ruc + "%"));
 	}
 
 }
