@@ -40,4 +40,13 @@ public class EditorialServiceImpl implements EditorialService {
 		return repository.listaEditorialPorNombre(nombre);
 	}
 
+	@Override
+	public List<Editorial> listaEditorialPorRazonSocialIgual(String nombre) {
+		return repository.listaEditorialPorRazonSocialIgual(nombre);
+	}
+
+	@Override
+	public List<Editorial> listaEditorialPorRuc(String ruc) {
+		return repository.listaEditorialPorRuc(ruc);
+	}
 }
