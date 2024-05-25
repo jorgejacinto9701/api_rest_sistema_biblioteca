@@ -90,4 +90,13 @@ public class AlumnoRestController {
 		}
 	}
 
+	@GetMapping("/porNombreApellidoIgual/{nombre}-{apellido}")
+	public ResponseEntity<List<Alumno>> listaAlumnoNombreApellidoIgual(@PathVariable("nombre")String nombre) {
+		log.info("METODO --> listaAlumnoPorNombre");
+		return ResponseEntity.ok(servicio.listaAlumnoPorNombre("%"+nombre+"%"));
+	}
+	
+
+
+
 }
