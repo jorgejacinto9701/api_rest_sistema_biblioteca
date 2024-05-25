@@ -42,7 +42,7 @@ public class UsuarioRestController {
 	
 	@GetMapping("/porNombre/{nombre}")
 	public ResponseEntity<List<Usuario>> listaUsuarioPorNombre(@PathVariable("nombre")String nombre) {
-		log.info("METODO --> listaUsuarioPorNombre");
+		log.info("METODO --> listaUsuarioPorNombre 111");
 		return ResponseEntity.ok(servicio.listaUsuarioPorNombre("%"+nombre+"%"));
 	}
 	
