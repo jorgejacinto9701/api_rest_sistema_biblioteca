@@ -12,4 +12,5 @@ public interface AutorService {
 	public void eliminaAutor(int idAutor);
 	public List<Autor> listaAutor();
 	public List<Autor> listaAutorPorNombre(String nombre);
+	public List<Autor> listaPorNombreApellidoIgual(String nombre,String apellidos);
 }
