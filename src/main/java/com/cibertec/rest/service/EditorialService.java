@@ -12,4 +12,11 @@ public interface EditorialService {
 	public void eliminaEditorial(int idEditorial);
 	public List<Editorial> listaEditorial();
 	public List<Editorial> listaEditorialPorNombre(String nombre);
+
+
+	public List<Editorial> listaEditorialPorRazonSocial(String razonSocial);
+	public List<Editorial> listaEditorialPorRuc(String ruc);
+
+
 }
+
