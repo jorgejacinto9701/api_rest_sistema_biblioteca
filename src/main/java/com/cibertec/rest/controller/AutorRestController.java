@@ -90,4 +90,10 @@ public class AutorRestController {
 		}
 	}
 
+	@GetMapping("/porNombreApellidoIgual/{nombre-apellidos}")
+    public ResponseEntity<List<Autor>> listaPorNombreApellidoIgual(@PathVariable("nombre,apellidos")String nombre,String apellidos) {
+        log.info("METODO --> listaPorNombreApellidoIgual");
+        return ResponseEntity.ok(servicio.listaPorNombreApellidoIgual("%"+nombre+"%","%"+apellidos+"%"));
+    }
+
 }
