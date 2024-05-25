@@ -91,10 +91,10 @@ public class ProveedorRestController {
 		}
 	}
 
-	@GetMapping("/porRazonSocial/(razSoc)")
-	public ResponseEntity<List<Proveedor>> listaProveedor() {
+	@GetMapping("/porRazonSocialIgual/{razSoc}")
+	public ResponseEntity<Proveedor> listaProveedor(@PathVariable("titulo")String) {
 		log.info("METODO --> listaProveedor");
-		return ResponseEntity.ok(servicio.listaProveedor());
+		return ResponseEntity.ok(servicio.listaProveedor("%"+razonSocial+"%"));
 	}
 
 }
