@@ -90,4 +90,9 @@ public class LibroRestController {
 		}
 	}
 
+	@GetMapping("/porTituloIgual/{titulo}")
+	public ResponseEntity<List<Libro>> listaLibroPorTituloIgual(@PathVariable("titulo")String nombre) {
+		log.info("METODO --> listaLibroPorTitulo");
+		return ResponseEntity.ok(servicio.listaLibroPorTituloIgual(nombre));
+	}
 }
