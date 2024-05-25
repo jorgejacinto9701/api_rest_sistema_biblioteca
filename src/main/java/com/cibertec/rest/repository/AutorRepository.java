@@ -12,4 +12,8 @@ public interface AutorRepository extends JpaRepository<Autor, Integer> {
 	
 	@Query("select e from Autor e where e.nombres like ?1")
 	public List<Autor> listaPorNombre(String nombre);
+
+	@Query("select e from Autor e where e.nombres = ?1 and e.apellidos = ?2")
+	public List<Autor> listaPorNombreApellidoIgual(String nombre,String apellidos);
+
 }
