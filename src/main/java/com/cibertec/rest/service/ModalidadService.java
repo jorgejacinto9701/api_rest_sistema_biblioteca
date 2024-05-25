@@ -3,7 +3,7 @@ package com.cibertec.rest.service;
 
 import java.util.List;
 
-import com.cibertec.rest.entity.Grado;
+
 import com.cibertec.rest.entity.Modalidad;
 
 public interface ModalidadService {

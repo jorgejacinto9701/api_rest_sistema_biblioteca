@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cibertec.rest.entity.Categoria;
-import com.cibertec.rest.entity.TipoProveedor;
+
 import com.cibertec.rest.repository.CategoriaRepository;
 
 @Service

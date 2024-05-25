@@ -12,4 +12,6 @@ public interface LibroService {
 	public void eliminaLibro(int idLibro);
 	public List<Libro> listaLibro();
 	public List<Libro> listaLibroPorTitulo(String nombre);
+	public List<Libro> listaLibroPorTituloIgual(String nombre);
+	
 }
