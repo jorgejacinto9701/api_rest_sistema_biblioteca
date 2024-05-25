@@ -45,8 +45,6 @@ public class AlumnoServiceImpl implements AlumnoService{
 		return repository.listaPorNombreApellidoIgual(nombre, apellidos);
 	}
 
-	
-
 }
 
 
