@@ -14,8 +14,8 @@ public interface EditorialService {
 	public List<Editorial> listaEditorialPorNombre(String nombre);
 
 
-	public List<Editorial> listaEditorialPorRazonSocial(String razonSocial);
-	public List<Editorial> listaEditorialPorRuc(String ruc);
+	public List<Editorial> listaEditorialPorRazonSocialigual(String razonSocial);
+	public List<Editorial> listaEditorialPorRucigual(String ruc);
 
 
 }
