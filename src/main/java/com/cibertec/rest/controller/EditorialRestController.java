@@ -91,4 +91,16 @@ public class EditorialRestController {
 		}
 	}
 
+	​
+	@GetMapping("/porRazonSocial/{razSoc}")
+    public ResponseEntity<List<Editorial>> listaEditorialPorRazonSocialIgual(@PathVariable("razSoc") String nombre) {
+        log.info("METODO --> listaEditorialPorRazonSocial");
+        return ResponseEntity.ok(servicio.listaEditorialPorRazonSocialIgual("%" + nombre + "%"));
+    }
+
+    @GetMapping("/porRuc/{ruc}")
+    public ResponseEntity<List<Editorial>> listaEditorialPorRuc(@PathVariable("ruc") String ruc) {
+        log.info("METODO --> listaEditoriañPorRuc");
+        return ResponseEntity.ok(servicio.listaEditorialPorRuc("%" + ruc + "%"));
+
 }
