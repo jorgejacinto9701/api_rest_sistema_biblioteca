@@ -12,4 +12,5 @@ public interface EditorialService {
 	public void eliminaEditorial(int idEditorial);
 	public List<Editorial> listaEditorial();
 	public List<Editorial> listaEditorialPorNombre(String nombre);
+	public List<Editorial> listaEditorialPorNombreIgual(String nombre);
 }

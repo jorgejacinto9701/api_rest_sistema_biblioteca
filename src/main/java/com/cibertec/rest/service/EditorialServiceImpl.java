@@ -40,4 +40,9 @@ public class EditorialServiceImpl implements EditorialService {
 		return repository.listaEditorialPorNombre(nombre);
 	}
 
+	@Override
+	public List<Editorial> listaEditorialPorNombreIgual(String nombre) {
+		return repository.listaEditorialPorNombreIgual(nombre);
+	}
+
 }

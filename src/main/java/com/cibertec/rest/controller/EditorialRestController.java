@@ -90,5 +90,11 @@ public class EditorialRestController {
 			return ResponseEntity.notFound().build();
 		}
 	}
+	
+	@GetMapping("/porNombreIgual/{nombre}")
+	public ResponseEntity<List<Editorial>> porNombreIgual(@PathVariable("nombre")String nombre) {
+		log.info("METODO --> porNombreIgual");
+		return ResponseEntity.ok(servicio.listaEditorialPorNombreIgual(nombre));
+	}
 
 }

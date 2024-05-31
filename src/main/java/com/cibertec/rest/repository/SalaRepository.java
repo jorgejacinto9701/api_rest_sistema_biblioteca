@@ -13,6 +13,6 @@ public interface SalaRepository extends JpaRepository<Sala, Integer> {
 	public List<Sala> listaSalaPorNumero(String nombre);
 
 	@Query("select e from Sala e where UPPER(e.numero) = UPPER(?1) ")
-	public List<Sala> listaSalaPorNumeroIgual(String nombre);
+	public List<Sala> listaSalaPorNumeroIgual(String numero);
 	
 }
