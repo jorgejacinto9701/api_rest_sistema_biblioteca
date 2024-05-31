@@ -42,7 +42,7 @@ public class RevistaServiceImpl implements RevistaService{
 
 	@Override
 	public List<Revista> listaRevistaPorNombreIgual(String nombre) {
-		return repository.listaRevistaPorNombre(nombre);
+		return repository.listaRevistaPorNombreIgual(nombre);
 	}
 
 	
