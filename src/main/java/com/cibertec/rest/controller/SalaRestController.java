@@ -89,5 +89,11 @@ public class SalaRestController {
 			return ResponseEntity.notFound().build();
 		}
 	}
+	
+	@GetMapping("/porNumeroIgual/{numero}")
+	public ResponseEntity<List<Sala>> listaSalaPorNumeroIgual(@PathVariable("numero")String numero) {
+		log.info("METODO --> listaSalaPorNumeroIgual");
+		return ResponseEntity.ok(servicio.listaSalaPorNumeroIgual(numero));
+	}
 
 }

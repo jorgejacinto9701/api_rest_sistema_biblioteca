@@ -89,5 +89,11 @@ public class AutorRestController {
 			return ResponseEntity.notFound().build();
 		}
 	}
+	
+	@GetMapping("/porNombreApellidoIgual/{nombre}-{apellido}")
+	public ResponseEntity<List<Autor>> listaAlumnoNombreApellidoIgual(@PathVariable("nombre")String nombre,@PathVariable("apellido")String apellido) {
+		log.info("METODO --> listaAlumnoNombreApellidoIgual");
+		return ResponseEntity.ok(servicio.listaPorNombreApellidoIgual(nombre, apellido));
+	}
 
 }

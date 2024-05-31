@@ -12,4 +12,6 @@ public interface UsuarioService {
 	public void eliminaUsuario(int idUsuario);
 	public List<Usuario> listaUsuario();
 	public List<Usuario> listaUsuarioPorNombre(String numero);
+	public List<Usuario> listaUsuarioPorNombreApellido(String nombre, String apellido);
+	
 }

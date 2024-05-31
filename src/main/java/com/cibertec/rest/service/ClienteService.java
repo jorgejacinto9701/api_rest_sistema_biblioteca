@@ -12,4 +12,5 @@ public interface ClienteService {
 	public void eliminaCliente(int idCliente);
 	public List<Cliente> listaCliente();
 	public List<Cliente> listaClientePorNombre(String nombre);
+	public List<Cliente> listaClientePorNombreIgual(String nombre);
 }

@@ -12,4 +12,5 @@ public interface SalaService {
 	public void eliminaSala(int idSala);
 	public List<Sala> listaSala();
 	public List<Sala> listaSalaPorNumero(String numero);
+	public List<Sala> listaSalaPorNumeroIgual(String nombre);
 }

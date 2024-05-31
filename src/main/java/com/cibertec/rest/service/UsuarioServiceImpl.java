@@ -40,6 +40,11 @@ public class UsuarioServiceImpl implements UsuarioService{
 		return repository.listaUsuarioPorNombre(numero);
 	}
 
+	@Override
+	public List<Usuario> listaUsuarioPorNombreApellido(String nombre, String apellido) {
+		return repository.listaUsuarioPorNombreApellido(nombre, apellido);
+	}
+
 	
 
 }

@@ -12,4 +12,5 @@ public interface RevistaService {
 	public void eliminaRevista(int idRevista);
 	public List<Revista> listaRevista();
 	public List<Revista> listaRevistaPorNombre(String nombre);
+	public List<Revista> listaRevistaPorNombreIgual(String nombre);
 }

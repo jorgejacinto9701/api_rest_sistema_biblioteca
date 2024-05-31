@@ -89,5 +89,11 @@ public class ClienteRestController {
 			return ResponseEntity.notFound().build();
 		}
 	}
+	
+	@GetMapping("/porNombreIgual/{nombre}")
+	public ResponseEntity<List<Cliente>> listaClientePorNombreLike(@PathVariable("nombre")String nombre) {
+		log.info("METODO --> listaClientePorNombreLike");
+		return ResponseEntity.ok(servicio.listaClientePorNombre(nombre));
+	}
 
 }

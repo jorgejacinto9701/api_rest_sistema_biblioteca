@@ -90,16 +90,16 @@ public class ProveedorRestController {
 		}
 	}
 
-	@GetMapping("/porRazonSocial/{razSoc}")
+	@GetMapping("/porRazonSocialIgual/{razSoc}")
 	public ResponseEntity<List<Proveedor>> listaProveedorPorRazonSocialIgual(@PathVariable("razSoc") String nombre) {
 		log.info("METODO --> listaProveedorPorRazonSocial");
-		return ResponseEntity.ok(servicio.listaProveedorPorRazonSocialIgual("%" + nombre + "%"));
+		return ResponseEntity.ok(servicio.listaProveedorPorRazonSocialIgual(nombre));
 	}
 
-	@GetMapping("/porRuc/{ruc}")
+	@GetMapping("/porRucIgual/{ruc}")
 	public ResponseEntity<List<Proveedor>> listaProveedorPorRuc(@PathVariable("ruc") String ruc) {
 		log.info("METODO --> listaProveedorPorRuc");
-		return ResponseEntity.ok(servicio.listaProveedorPorRuc("%" + ruc + "%"));
+		return ResponseEntity.ok(servicio.listaProveedorPorRuc(ruc));
 	}
 
 }

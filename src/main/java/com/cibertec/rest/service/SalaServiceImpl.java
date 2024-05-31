@@ -40,6 +40,11 @@ public class SalaServiceImpl implements SalaService{
 		return repository.listaSalaPorNumero(numero);
 	}
 
+	@Override
+	public List<Sala> listaSalaPorNumeroIgual(String nombre) {
+		return repository.listaSalaPorNumeroIgual(nombre);
+	}
+
 	
 
 }

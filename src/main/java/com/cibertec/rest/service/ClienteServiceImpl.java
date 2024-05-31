@@ -40,6 +40,11 @@ public class ClienteServiceImpl implements ClienteService{
 		return repository.listaPorNombre(nombre);
 	}
 
+	@Override
+	public List<Cliente> listaClientePorNombreIgual(String nombre) {
+		return repository.listaPorNombreIgual(nombre);
+	}
+
 	
 
 }

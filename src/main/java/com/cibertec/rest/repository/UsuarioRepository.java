@@ -12,4 +12,7 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 	@Query("select e from Usuario e where e.nombre like ?1")
 	public List<Usuario> listaUsuarioPorNombre(String nombre);
 
+	
+	@Query("select e from Usuario e where e.nombre = ?1  and e.apellido = ?2")
+	public List<Usuario> listaUsuarioPorNombreApellido(String nombre, String apellido);
 }

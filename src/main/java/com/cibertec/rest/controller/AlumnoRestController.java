@@ -91,9 +91,9 @@ public class AlumnoRestController {
 	}
 
 	@GetMapping("/porNombreApellidoIgual/{nombre}-{apellido}")
-	public ResponseEntity<List<Alumno>> listaAlumnoNombreApellidoIgual(@PathVariable("nombre")String nombre) {
+	public ResponseEntity<List<Alumno>> listaAlumnoNombreApellidoIgual(@PathVariable("nombre")String nombre,@PathVariable("apellido")String apellido) {
 		log.info("METODO --> listaAlumnoPorNombre");
-		return ResponseEntity.ok(servicio.listaAlumnoPorNombre("%"+nombre+"%"));
+		return ResponseEntity.ok(servicio.listaPorNombreApellidoIgual(nombre, apellido));
 	}
 	
 
