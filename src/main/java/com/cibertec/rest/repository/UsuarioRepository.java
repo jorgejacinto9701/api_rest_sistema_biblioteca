@@ -13,6 +13,6 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 	public List<Usuario> listaUsuarioPorNombre(String nombre);
 
 	
-	@Query("select e from Usuario e where e.nombre = ?1  and e.apellido = ?2")
+	@Query("select e from Usuario e where UPPER(e.nombre) = UPPER(?1)  and UPPER(e.apellido) = UPPER(?2)")
 	public List<Usuario> listaUsuarioPorNombreApellido(String nombre, String apellido);
 }

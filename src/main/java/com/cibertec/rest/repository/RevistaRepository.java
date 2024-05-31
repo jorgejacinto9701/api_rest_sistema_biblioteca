@@ -14,6 +14,6 @@ public interface RevistaRepository extends JpaRepository<Revista, Integer> {
 	public List<Revista> listaRevistaPorNombre(String nombre);
 	
 	
-	@Query("select e from Revista e where e.nombre = ?1")
+	@Query("select e from Revista e where UPPER(e.nombre) = UPPER(?1)")
 	public List<Revista> listaRevistaPorNombreIgual(String nombre);
 }

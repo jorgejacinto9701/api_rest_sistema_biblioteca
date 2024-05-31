@@ -12,7 +12,7 @@ public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
 	@Query("select e from Cliente e where e.nombre like ?1")
 	public List<Cliente> listaPorNombre(String nombre);
 
-	@Query("select e from Cliente e where e.nombre = ?1")
+	@Query("select e from Cliente e where UPPER(e.nombre) = UPPER(?1)")
 	public List<Cliente> listaPorNombreIgual(String nombre);
 
 }
